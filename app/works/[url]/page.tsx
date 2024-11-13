@@ -35,11 +35,13 @@ export default function Work({ params }: { params: workItemType }) {
                     <h2 className={`${styled.detail__title} ${JostFont.className}`}>{item.name}</h2>
                     <p className={styled.detail__text}>{item.description}</p>
                     <p className={styled.detail__term}>制作期間：{item.term}</p>
-                    <div className={styled.detail__more}>
-                      <Link href={item.url} className={`btn upper ${styled.detail__link} ${JostFont.className}`}>
-                        More
-                      </Link>
-                    </div>
+                    {item.link && (
+                      <div className={styled.detail__more}>
+                        <Link href={item.link} className={`btn upper ${styled.detail__link} ${JostFont.className}`} target="_blank">
+                          {item.github ? 'Github' : 'More'}
+                        </Link>
+                      </div>
+                    )}
                   </div>
                 </div>
               )
