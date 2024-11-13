@@ -22,7 +22,7 @@ export const workItems = [
   },
   {
     id: 2,
-    name: 'VIEW（模写）',
+    name: 'VIEW（実案件の模写）',
     image: '/thum_view.jpg',
     url: 'view',
     link: 'https://view-flax.vercel.app',
@@ -31,7 +31,7 @@ export const workItems = [
   },
   {
     id: 3,
-    name: 'MANSION SITE（模写）',
+    name: 'MANSION SITE（実案件の模写）',
     image: '/thum_mansion01.jpg',
     url: 'mansion01',
     link: 'https://mansion01.vercel.app',
@@ -40,7 +40,7 @@ export const workItems = [
   },
   {
     id: 4,
-    name: 'MANSION SITE（模写）',
+    name: 'MANSION SITE（実案件の模写）',
     image: '/thum_mansion02.jpg',
     url: 'mansion02',
     link: 'https://mansion02.vercel.app',
