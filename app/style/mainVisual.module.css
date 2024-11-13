@@ -1,0 +1,40 @@
+.mv {
+  position: relative;
+  display: flex;
+  height: 100vh;
+  height: 100svh;
+  align-items: center;
+  z-index: 0;
+}
+
+.pageTitle {
+  width: min(calc(100% - 120px), 1500px);
+  font-size: clamp(24px, 0.16rem + 2.78vw, 56px);
+  font-weight: 600;
+  letter-spacing: 0.1em;
+  color: #023319;
+  margin-inline: auto;
+}
+
+.mv__cover {
+  position: absolute;
+  top: 50%;
+  right: 0;
+  transform: translateY(-50%);
+  width: 70vw;
+  height: 100%;
+  background-color: #eef4f1;
+  border-radius: 50vw 0 0 50vw;
+  z-index: -1;
+}
+
+@media screen and (max-width: 768px) {
+  .pageTitle {
+    width: calc(100% - 45px);
+  }
+
+  .mv__cover {
+    width: 80vw;
+    height: 80%;
+  }
+}

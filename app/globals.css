@@ -1,42 +1,520 @@
-:root {
-  --background: #ffffff;
-  --foreground: #171717;
+/*! normalize.css v3.0.3 | MIT License | github.com/necolas/normalize.css */
+html {
+  font-family: Arial, Hiragino Kaku Gothic ProN, ヒラギノ角ゴ ProN W3, Meiryo, Helvetica, メイリオ, sans-serif;
+  -ms-text-size-adjust: 100%;
+  -webkit-text-size-adjust: 100%;
 }
-
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
-  }
-}
-
+abbr,
+address,
+article,
+aside,
+audio,
+b,
+blockquote,
+body,
+canvas,
+caption,
+cite,
+code,
+dd,
+del,
+details,
+dfn,
+div,
+dl,
+dt,
+em,
+fieldset,
+figcaption,
+figure,
+footer,
+form,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+header,
+hgroup,
 html,
-body {
-  max-width: 100vw;
-  overflow-x: hidden;
-}
-
-body {
-  color: var(--foreground);
-  background: var(--background);
-  font-family: Arial, Helvetica, sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-}
-
-* {
-  box-sizing: border-box;
+i,
+iframe,
+img,
+ins,
+kbd,
+label,
+legend,
+li,
+mark,
+menu,
+nav,
+object,
+ol,
+p,
+pre,
+q,
+samp,
+section,
+small,
+span,
+strong,
+sub,
+summary,
+sup,
+table,
+tbody,
+td,
+tfoot,
+th,
+thead,
+time,
+tr,
+ul,
+var,
+video {
+  margin: 0;
   padding: 0;
+  border: 0;
+  outline: 0;
+  vertical-align: baseline;
+  background: transparent;
+}
+article,
+aside,
+details,
+figcaption,
+figure,
+footer,
+header,
+hgroup,
+main,
+menu,
+nav,
+section,
+summary {
+  display: block;
+}
+audio,
+canvas,
+progress,
+video {
+  display: inline-block;
+  vertical-align: baseline;
+}
+audio:not([controls]) {
+  display: none;
+  height: 0;
+}
+[hidden],
+template {
+  display: none;
+}
+a {
+  color: #000;
+  background-color: transparent;
+  text-decoration: none;
+}
+a:active,
+a:hover {
+  outline: 0;
+}
+abbr[title] {
+  border-bottom: 1px dotted;
+}
+b,
+strong {
+  font-weight: 700;
+}
+dfn {
+  font-style: italic;
+}
+mark {
+  background: #ff0;
+  color: #000;
+}
+small {
+  font-size: 80%;
+}
+sub,
+sup {
+  font-size: 75%;
+  line-height: 0;
+  position: relative;
+  vertical-align: baseline;
+}
+sup {
+  top: -0.5em;
+}
+sub {
+  bottom: -0.25em;
+}
+img {
+  border: 0;
+  -ms-interpolation-mode: bicubic;
+  vertical-align: bottom;
+  max-width: 100%;
+  height: auto;
+}
+svg:not(:root) {
+  overflow: hidden;
+}
+figure {
   margin: 0;
 }
+hr {
+  box-sizing: content-box;
+  height: 0;
+}
+pre {
+  overflow: auto;
+}
+code,
+kbd,
+pre,
+samp {
+  font-family: monospace;
+  font-size: 1em;
+}
+li {
+  list-style: none;
+}
+button,
+input,
+optgroup,
+select,
+textarea {
+  color: inherit;
+  font: inherit;
+  margin: 0;
+}
+button {
+  overflow: visible;
+}
+button,
+select {
+  text-transform: none;
+}
+button,
+html input[type='button'],
+input[type='reset'],
+input[type='submit'] {
+  -webkit-appearance: button;
+  cursor: pointer;
+}
+button[disabled],
+html input[disabled] {
+  cursor: default;
+}
+button::-moz-focus-inner,
+input::-moz-focus-inner {
+  border: 0;
+  padding: 0;
+}
+input {
+  line-height: normal;
+}
+input[type='checkbox'],
+input[type='radio'] {
+  box-sizing: border-box;
+  padding: 0;
+}
+input[type='number']::-webkit-inner-spin-button,
+input[type='number']::-webkit-outer-spin-button {
+  height: auto;
+}
+input[type='search'] {
+  -webkit-appearance: textfield;
+  box-sizing: content-box;
+}
+input[type='search']::-webkit-search-cancel-button,
+input[type='search']::-webkit-search-decoration {
+  -webkit-appearance: none;
+}
+fieldset {
+  border: 1px solid silver;
+  margin: 0 2px;
+  padding: 0.35em 0.625em 0.75em;
+}
+legend {
+  border: 0;
+  padding: 0;
+}
+textarea {
+  overflow: auto;
+}
+optgroup {
+  font-weight: 700;
+}
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+td,
+th {
+  padding: 0;
+}
+img {
+  backface-visibility: hidden;
+}
 
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+button {
+  background-color: transparent;
+  border: none;
+  cursor: pointer;
+  padding: 0;
+  appearance: none;
+}
+em {
+  font-style: normal;
+}
+b,
+strong {
+  font-weight: normal;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+th {
+  font-weight: normal;
+}
 a {
   color: inherit;
+}
+a:hover {
   text-decoration: none;
 }
 
-@media (prefers-color-scheme: dark) {
-  html {
-    color-scheme: dark;
+body {
+  color: #333;
+  /*font-family: 'YakuHanJP','Noto Sans JP', sans-serif;*/
+  font-family: 'YakuHanJP', '游ゴシック体', 'Yu Gothic', YuGothic, 'ヒラギノ角ゴ Pro', 'Hiragino Kaku Gothic Pro', 'メイリオ', 'Meiryo', 'sans-serif';
+  /* font-family: 'YakuHanMP', '游明朝', YuMincho, 'ヒラギノ明朝 ProN W3', 'Hiragino Mincho ProN', 'HG明朝E', 'MS P明朝', 'MS 明朝', serif; */
+  font-feature-settings: 'palt';
+  font-size: 16px;
+  letter-spacing: 0;
+  line-height: 1;
+  margin: auto;
+  padding: 0;
+  /* opacity: 0; */
+  overflow-x: hidden;
+  transition: 1s;
+  -webkit-text-size-adjust: 100%;
+}
+
+.upper {
+  text-transform: uppercase;
+}
+
+/* header
+---------------------------------------------- */
+.header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  background-color: rgb(255 255 255 / 0.6);
+  padding: 1em 80px;
+  z-index: 100;
+}
+
+.globalNavWrap {
+  flex: 1;
+}
+
+.globalNav {
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  column-gap: 2em;
+}
+
+.globalNav__link {
+  position: relative;
+  font-size: 16px;
+  font-weight: 600;
+  letter-spacing: 0.1em;
+  line-height: 1.4;
+  cursor: pointer;
+  z-index: 0;
+}
+.globalNav__link::before {
+  content: '';
+  position: absolute;
+  bottom: -0.3em;
+  left: 0;
+  width: 0;
+  height: 1px;
+  background-color: #333;
+  transition: width 0.4s;
+}
+
+@media (hover: hover) and (pointer: fine) {
+  .globalNav__link:hover::before {
+    width: 100%;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .header {
+    height: 60px;
+    background-color: transparent;
+    padding: 0 20px;
+  }
+
+  .logo {
+    width: 40px;
+  }
+
+  .globalNavWrap {
+    position: fixed;
+    top: 0;
+    right: 0;
+    width: 50vw;
+    height: 100lvh;
+    background-color: rgb(255 255 255 / 0.9);
+    transform: translateX(100vw);
+    padding: 20px;
+    transition: 0.4s ease;
+    z-index: 5;
+  }
+  .globalNavWrap.is-active {
+    transform: translateX(0);
+  }
+
+  .globalNav {
+    flex-direction: column;
+    justify-content: center;
+    row-gap: 20px;
+    height: 100%;
+  }
+
+  .navBtn {
+    position: fixed;
+    top: 0;
+    right: 0;
+    width: 60px;
+    aspect-ratio: 1;
+    z-index: 10;
+  }
+
+  .navBtn__child {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 50%;
+    height: 2px;
+    background-color: #000;
+    transition: 0.4s ease;
+    z-index: 1;
+  }
+  .navBtn__child::before,
+  .navBtn__child::after {
+    content: '';
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 100%;
+    height: 2px;
+    background-color: #023319;
+    transition: 0.4s ease;
+    z-index: 1;
+  }
+  .navBtn__child::before {
+    top: -8px;
+  }
+  .navBtn__child::after {
+    bottom: -8px;
+  }
+
+  .navBtn.is-active {
+    transform: rotate(180deg);
+  }
+  .navBtn.is-active .navBtn__child {
+    background-color: transparent;
+  }
+  .navBtn.is-active .navBtn__child::before {
+    top: 0;
+    transform: translateX(-50%) rotate(45deg);
+  }
+  .navBtn.is-active .navBtn__child::after {
+    bottom: 0;
+    transform: translateX(-50%) rotate(-45deg);
+  }
+}
+
+/* main
+---------------------------------------------- */
+.heading {
+  font-size: clamp(20px, 0.08rem + 2.43vw, 48px);
+  font-weight: 600;
+  letter-spacing: 0.1em;
+  line-height: 1.6;
+  text-align: center;
+}
+
+.backText {
+  position: absolute;
+  top: 2%;
+  font-size: clamp(120px, 1.65rem + 12.16vw, 260px);
+  font-weight: 600;
+  letter-spacing: 0;
+  line-height: 1;
+  color: #eef4f1;
+  text-transform: uppercase;
+  z-index: -1;
+}
+
+.about .backText {
+  left: 0;
+}
+
+.works .backText {
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+.skill .backText {
+  left: auto;
+  right: 0;
+}
+
+@media screen and (max-width: 768px) {
+  .backText {
+    top: 0;
+  }
+}
+
+/* footer
+---------------------------------------------- */
+.footer {
+  background-color: #023319;
+  color: #fff;
+  padding: 1em;
+}
+
+.copyright {
+  font-size: 14px;
+  letter-spacing: 0.1em;
+  line-height: 1;
+  text-align: center;
+}
+
+@media screen and (max-width: 768px) {
+  .copyright {
+    font-size: 12px;
   }
 }

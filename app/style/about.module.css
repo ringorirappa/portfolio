@@ -1,0 +1,29 @@
+.container {
+  width: min(calc(100% - 120px), 1000px);
+  margin-inline: auto;
+}
+
+.about__copy {
+  font-size: clamp(18px, 0.54rem + 1.22vw, 32px);
+  font-weight: 600;
+  letter-spacing: 0.1em;
+  line-height: 1.8;
+}
+
+.about__text {
+  font-size: clamp(14px, 0.79rem + 0.17vw, 16px);
+  letter-spacing: 0.1em;
+  line-height: 2;
+}
+* + .about__text {
+  margin-top: 2em;
+}
+.about__text + .about__text {
+  margin-top: 1em;
+}
+
+@media screen and (max-width: 768px) {
+  .container {
+    width: calc(100% - 45px);
+  }
+}
