@@ -12,6 +12,16 @@ export type workItemType = {
 export const workItems = [
   {
     id: 1,
+    name: 'Portfolio',
+    image: '/thum_portfolio.jpg',
+    url: 'portfolio',
+    link: 'https://github.com/ringorirappa/portfolio',
+    description: '実績掲載用のポートフォリオサイト。学習も兼ねてNext.js + TypeScriptで構築しました。実績詳細ページは動的にルーティングするように実装、ページ内スクロールやバーガーメニュー（SP）はuse clientで実装しています。デザインもまだまだですが、シンプルで必要最低限の内容になっています。日々ブラッシュアップ予定…',
+    term: '10時間（構成・デザイン・実装）',
+    github: true,
+  },
+  {
+    id: 2,
     name: 'Clamp Calculator',
     image: '/thum_clamp.jpg',
     url: 'clamp-calculator',
@@ -21,7 +31,7 @@ export const workItems = [
     github: true,
   },
   {
-    id: 2,
+    id: 3,
     name: 'VIEW（実案件の模写）',
     image: '/thum_view.jpg',
     url: 'view',
@@ -30,7 +40,7 @@ export const workItems = [
     term: '5時間（実務での制作時）',
   },
   {
-    id: 3,
+    id: 4,
     name: 'MANSION SITE（実案件の模写）',
     image: '/thum_mansion01.jpg',
     url: 'mansion01',
@@ -39,7 +49,7 @@ export const workItems = [
     term: '8時間（模写部分のみ・実務での制作時）',
   },
   {
-    id: 4,
+    id: 5,
     name: 'MANSION SITE（実案件の模写）',
     image: '/thum_mansion02.jpg',
     url: 'mansion02',

@@ -114,7 +114,9 @@
   line-height: 1.5;
   padding: 0.8em;
   background-color: #023319;
+  border: 1px solid #023319;
   color: #fff;
+  transition: background-color 0.4s, color 0.4s;
   text-align: center;
 }
 
@@ -134,7 +136,18 @@
   padding: 1em;
   background-color: #333;
   color: #fff;
+  transition: filter 0.4s;
   text-align: center;
+}
+
+@media (hover: hover) and (pointer: fine) {
+  .detail__link:hover {
+    background-color: #fff;
+    color: #023319;
+  }
+  .backBtn:hover {
+    filter: brightness(1.5);
+  }
 }
 
 @media screen and (max-width: 768px) {
