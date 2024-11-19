@@ -493,6 +493,10 @@ body {
 }
 
 @media screen and (max-width: 768px) {
+  main {
+    overflow-x: hidden;
+  }
+
   .backText {
     top: 0;
   }
