@@ -27,7 +27,7 @@ export default function Work({ params }: { params: workItemType }) {
               item.url === params.url && (
                 <div className={styled.workContents}>
                   <div className={styled.workContents__image}>
-                    <Link href={item.url}>
+                    <Link href={item.link} target="_blank">
                       <Image src={item.image} width={800} height={450} alt={`${item.name}のキャプチャ`} />
                     </Link>
                   </div>
