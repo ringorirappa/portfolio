@@ -3,7 +3,7 @@ export type workItemType = {
   name: string;
   image: string;
   url: string;
-  link?: string;
+  link: string;
   description: string;
   term: string;
   github?: boolean;
