@@ -34,6 +34,7 @@ export default function Work({ params }: { params: workItemType }) {
                   <div className={styled.detail}>
                     <h2 className={`${styled.detail__title} ${JostFont.className}`}>{item.name}</h2>
                     <p className={styled.detail__text}>{item.description}</p>
+                    <p className={styled.detail__charge}>担当：{item.charge}</p>
                     <p className={styled.detail__term}>制作期間：{item.term}</p>
                     {item.link && (
                       <div className={styled.detail__more}>
