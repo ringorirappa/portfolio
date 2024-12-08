@@ -6,6 +6,8 @@ import { usePathname } from 'next/navigation';
 import { useState } from 'react';
 import { Link as Scroll } from 'react-scroll';
 
+import { ThemeToggle } from './theme-toggle';
+
 export default function Header() {
   const pathname = usePathname();
 
@@ -62,6 +64,7 @@ export default function Header() {
             </li>
           </ul>
         </div>
+        <ThemeToggle />
         <button type="button" className={`navBtn sp-bl ${isActive ? 'is-active' : ''}`} onClick={onClickToggle}>
           <span className="navBtn__child"></span>
         </button>

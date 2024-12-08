@@ -12,8 +12,20 @@
   font-size: clamp(24px, 0.16rem + 2.78vw, 56px);
   font-weight: 600;
   letter-spacing: 0.1em;
-  color: #023319;
+  color: var(--color-green);
   margin-inline: auto;
+  overflow: hidden;
+}
+
+.pageTitle__child {
+  display: inline-block;
+  transform: translateY(110%);
+  transition: 0.8s cubic-bezier(0.03, 0.59, 0.36, 1);
+  overflow: hidden;
+}
+
+.loaded .pageTitle__child {
+  transform: translateY(0);
 }
 
 .mv__cover {
@@ -21,9 +33,9 @@
   top: 50%;
   right: 0;
   transform: translateY(-50%);
-  width: 70vw;
+  width: 50vw;
   height: 100%;
-  background-color: #eef4f1;
+  background-color: var(--color-mv-cover);
   border-radius: 50vw 0 0 50vw;
   z-index: -1;
 }
